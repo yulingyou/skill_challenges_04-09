@@ -2,8 +2,10 @@ def say_hello(name)
   return "hello #{name}"
 end
 
-greeting = say_hello("kay")
-puts greeting
+puts say_hello("kay")
+
+# greeting = say_hello("kay")
+# puts greeting
 
 # Intended output:
 #

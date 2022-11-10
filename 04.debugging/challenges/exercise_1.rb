@@ -1,8 +1,8 @@
 def say_hello(name)
-  return "hello #{name}"
+  puts "hello #{name}"
 end
 
-puts say_hello("kay")
+say_hello("kay")
 
 # greeting = say_hello("kay")
 # puts greeting

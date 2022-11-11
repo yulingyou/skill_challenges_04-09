@@ -1,7 +1,13 @@
 def get_most_common_letter(text)
   counter = Hash.new(0)
+  # array = text.chars - [" ",",","!"]
+  # p array
+    # array.each do |char|
+    #   counter[char] += 1
+      # p char
+      # end
   text.chars.each do |char|
-    if char != " " && char != ","
+    if char != " " && char != "," && char != "!"
     counter[char] += 1
     # p char
     end

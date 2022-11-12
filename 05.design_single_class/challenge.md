@@ -1,4 +1,4 @@
-# {{PROBLEM}} Class Design Recipe
+# MusicList Class Design Recipe
 
 ## 1. Describe the Problem
 

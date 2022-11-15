@@ -8,3 +8,4 @@ RSpec.describe "diary" do
     end
   end
 end
+

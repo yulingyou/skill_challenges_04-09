@@ -14,6 +14,13 @@ RSpec.describe Todo do
   it "return true if task is done" do
     todo = Todo.new("shopping")
     todo.mark_done!
-    expect(todo.done?).to eq true
+    # expect(todo.done?).to eq true
+    expect(todo.done?).to be_truthy
+  end
+
+  it "return false if task is not done" do
+    todo = Todo.new("shopping")
+    # expect(todo.done?).to eq false
+    expect(todo.done?).to be_falsy
   end
 end

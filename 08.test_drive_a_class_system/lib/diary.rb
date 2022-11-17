@@ -24,14 +24,17 @@ class Diary
     @totalWords
   end
 
-  def reading_time(wpm) # wpm is an integer representing
-                        # the number of words the user can read per minute
-    # Returns an integer representing an estimate of the reading time in minutes
-    # if the user were to read all entries in the diary.
+  def reading_time(wpm) # wpm is an integer representing the number of user can read per minute. Returns an integer representing an estimate of the reading time in minutes
+  # if the user were to read all entries in the diary.
     ((@totalWords.to_f / wpm.to_f)).ceil
   end
 
   def find_best_entry_for_reading_time(wpm, minutes)
+  # `wpm` is an integer representing the number of words the user can read per minute.
+  # `minutes` is an integer representing the number of minutes the user has to read.
+  # Returns an instance of diary entryrepresenting the entry that is closest 
+  # to, but not over, the length that the user could read in the minutes they
+  # have available given their reading speed.
     readable_entries = @my_diary.filter do |entry|
       entry.reading_time(wpm) <= minutes
     end

@@ -4,8 +4,8 @@ class PhoneBook
   end
 
   def extract_numbers
-    @diary.entries.map do |entry|
-    entry.contents.match(/[0-9]{11}/).to_s
-    end
+    @diary.entries.flat_map do |entry|
+    entry.contents.scan(/07[0-9]{9}/)
+    end.uniq
   end
 end

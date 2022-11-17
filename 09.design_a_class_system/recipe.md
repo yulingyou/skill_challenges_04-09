@@ -119,7 +119,7 @@ class TaskList
   # Returns a list of all the tasks
   end
 end
-
+# ==============================================================
 class Task
   def initialize(title) # title is a string
   end
@@ -142,64 +142,64 @@ combinations that reflect the ways in which the system will be used._
 # EXAMPLE
 
 # Constructs a diary
-my_diary = Diary.new
-diary_entry = DiaryEntry.new("my title", "my contents")
-my_diary.add(diary_entry)
-my_diary.entries # => [diary_entry]
+# my_diary = Diary.new
+# diary_entry = DiaryEntry.new("my title", "my contents")
+# my_diary.add(diary_entry)
+# my_diary.entries # => [diary_entry]
 
 # add multiple entries in diary
-my_diary = Diary.new
-diary_entry_1 = DiaryEntry.new("my title 1", "my contents 1")
-diary_entry_2 = DiaryEntry.new("my title 2", "my contents 2")
-my_diary.add(diary_entry_1)
-my_diary.add(diary_entry_2)
-my_diary.entries # => [diary_entry_1, diary_entry_2]
+# my_diary = Diary.new
+# diary_entry_1 = DiaryEntry.new("my title 1", "my contents 1")
+# diary_entry_2 = DiaryEntry.new("my title 2", "my contents 2")
+# my_diary.add(diary_entry_1)
+# my_diary.add(diary_entry_2)
+# my_diary.entries # => [diary_entry_1, diary_entry_2]
 
 # Extract a single phone number and add them in a list
-my_diary = Diary.new
-diary_entry = DiaryEntry.new("Bob", "07123123123")
-my_diary.add(diary_entry)
+# my_diary = Diary.new
+# diary_entry = DiaryEntry.new("Bob", "07123123123")
+# my_diary.add(diary_entry)
 
-phone_book = PhoneBook.new(my_diary)
-phone_book.extract_numbers # => ["07123123123"]
+# phone_book = PhoneBook.new(my_diary)
+# phone_book.extract_numbers # => ["07123123123"]
 
 
 # Extract multiple phone numbers and add them in a list
-my_diary = Diary.new
-diary_entry_1 = DiaryEntry.new("Bob", "07123123123")
-diary_entry_2 = DiaryEntry.new("Bill", "blabla 07234234234 blabla")
-my_diary.add(diary_entry_1)
-my_diary.add(diary_entry_2)
-phone_book = PhoneBook.new(my_diary)
-phone_book.extract_numbers # => ["07123123123","07234234234"]
+# my_diary = Diary.new
+# diary_entry_1 = DiaryEntry.new("Bob", "07123123123")
+# diary_entry_2 = DiaryEntry.new("Bill", "blabla 07234234234 blabla")
+# my_diary.add(diary_entry_1)
+# my_diary.add(diary_entry_2)
+# phone_book = PhoneBook.new(my_diary)
+# phone_book.extract_numbers # => ["07123123123","07234234234"]
 
 
 # Pick a readable diary entry within time & wpm
-my_diary = Diary.new
-diary_entry_1 = DiaryEntry.new("Bob", "one two")
-diary_entry_2 = DiaryEntry.new("Bill", "one two three four")
-my_diary.add(diary_entry_1)
-my_diary.add(diary_entry_2)
-diary_reader = DiaryReader.new(2, my_diary) #wpm is 2
-diary_reader.find_most_readable_in_time(2) # => diary_entry_2
+# my_diary = Diary.new
+# diary_entry_1 = DiaryEntry.new("Bob", "one two")
+# diary_entry_2 = DiaryEntry.new("Bill", "one two three four")
+# my_diary.add(diary_entry_1)
+# my_diary.add(diary_entry_2)
+# diary_reader = DiaryReader.new(2, my_diary) #wpm is 2
+# diary_reader.find_most_readable_in_time(2) # => diary_entry_2
 # user can read 2 words per minute and has 2 minute so should return diary_entry_2
 
 
 # Add a task to the task list and return a task
 
 
-my_task_list = TaskList.new
-my_task = Task.new("Wash the dog")
-my_task_list.add(my_task) 
-my_task_list.all # => ["Wash the dog"]
+# my_task_list = TaskList.new
+# my_task = Task.new("Wash the dog")
+# my_task_list.add(my_task) 
+# my_task_list.all # => [my_task]
 
 # Add two tasks to the task list and return two tasks
-my_task_list = TaskList.new
-my_task_1 = Task.new("Wash the dog")
-my_task_2 = Task.new("Wash the cat")
-my_task_list.add(my_task_1) 
-my_task_list.add(my_task_2)
-my_task_list.all # => ["Wash the dog", "Wash the cat"]
+# my_task_list = TaskList.new
+# my_task_1 = Task.new("Wash the dog")
+# my_task_2 = Task.new("Wash the cat")
+# my_task_list.add(my_task_1) 
+# my_task_list.add(my_task_2)
+# my_task_list.all # => [my_task_1,my_task_2]
 
 
 ```
@@ -214,16 +214,16 @@ a more granular level of detail._
 
 # DIARY ENTRY
 # Constructs a diary entry
-diary_entry = DiaryEntry.new("my title", "my contents")
-diary_entry.title # => "my title"
-diary_entry.contents # => "my contents"
+# diary_entry = DiaryEntry.new("my title", "my contents")
+# diary_entry.title # => "my title"
+# diary_entry.contents # => "my contents"
 
 
 # TASK
 # Constructs and return title
 
-my_task = Task.new("Wash the dog")
-my_task.title # => "Wash the dog"
+# my_task = Task.new("Wash the dog")
+# my_task.title # => "Wash the dog"
 
 
 
